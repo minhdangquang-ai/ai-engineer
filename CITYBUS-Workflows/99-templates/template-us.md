@@ -1,7 +1,7 @@
 # Template User Story (file US — Tầng 3)
 
 <!--
-Cách dùng: copy file này vào 02-projects/<dự án>/us/, đổi tên thành <Mã task>-<tên ngắn>.md
+Cách dùng: copy file này vào 02-projects/<dự án>/nghiep-vu-theo-us/backlog/ (hoặc thư mục sprint tương ứng nếu US đã được xếp sprint), đổi tên thành <Mã task>-<tên ngắn>.md
 Mục nào không áp dụng thì ghi "Không áp dụng" — KHÔNG xóa mục.
 Thiếu Nguồn đối chiếu / Người review / Ngày review ở phần đầu: QC/DEV có quyền trả Task về.
 -->

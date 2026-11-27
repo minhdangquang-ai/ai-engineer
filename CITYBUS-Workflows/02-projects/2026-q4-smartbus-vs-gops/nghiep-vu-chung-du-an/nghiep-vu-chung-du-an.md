@@ -2,6 +2,7 @@
 
 > File này chỉ chứa nghiệp vụ **riêng của dự án tích hợp Smartbus App ↔ GoPS App**. Nghiệp vụ chung Citybus (vai trò TTCC/GoLab, chính sách miễn phí vé, khung eLVC, nguyên tắc trợ giá) nằm ở file Core: `01-core-wiki/00-nghiep-vu-core-citybus.md` — đọc Core trước khi đọc file này.
 > Nguồn: tài liệu tổng hợp nghiệp vụ Citybus, cập nhật 26/11/2026.
+> **Lưu vết (2026-11-27):** áp dụng logic thư mục của dự án App điều hành tài xế trên Tablet (FTT) cho dự án này theo yêu cầu của Minh — file đổi tên từ `nghiep-vu-du-an.md` thành `nghiep-vu-chung-du-an.md` và chuyển vào thư mục `nghiep-vu-chung-du-an/`. Mọi thay đổi nghiệp vụ về sau ghi riêng thành file mới trong cùng thư mục, tên có tiền tố ngày `yyyy-mm-dd` và chỉ rõ phần đã thay đổi (xem `README.md` cùng thư mục).
 
 ---
 
