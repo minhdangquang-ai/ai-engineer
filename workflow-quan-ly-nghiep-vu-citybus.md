@@ -3,7 +3,7 @@
 
 | | |
 |---|---|
-| **Phiên bản** | 1.0 — ngày 27/11/2026 |
+| **Phiên bản** | 1.1 — ngày 27/11/2026 (v1.0 cùng ngày; v1.1 bổ sung: file Core dùng nạp ngữ cảnh AI, biên bản họp theo dự án, báo cáo ngày trước 16:00 — xem Mục 14) |
 | **Trạng thái** | Bản chốt để trình team/Quản lý và áp dụng thử (pilot) |
 | **Người chịu trách nhiệm** | BA (Business Analyst) — chủ trì nghiệp vụ |
 | **Phạm vi áp dụng** | Các dự án thuộc hệ thống Citybus (FUTA) |
@@ -46,7 +46,8 @@ futa-citybus/
 ├── 00-inbox/                    # Sổ tiếp nhận thông tin thô của BA theo ngày (YYYY-MM/YYYY-MM-DD.md)
 │                                # Nguồn: chat/email/yêu cầu từ vận hành, đối tác
 │                                # Trạng thái mỗi mục: "Chờ lên Jira" / "Đã lên Jira [link task]"
-├── 01-core-wiki/                # TẦNG 1 — Nghiệp vụ chung Citybus, chia theo miền
+├── 01-core-wiki/                # TẦNG 1 — Nghiệp vụ chung Citybus
+│   ├── 00-nghiep-vu-core-citybus.md  # File Core duy nhất, tự chứa — dùng để nạp ngữ cảnh cho AI
 │   ├── 01-web-admin.md
 │   ├── 02-onbus-hardware.md
 │   ├── 03-mobile-app-driver.md
@@ -56,10 +57,13 @@ futa-citybus/
 │       ├── README.md            # Mục lục của dự án
 │       ├── <nghiep-vu-du-an>.md # Nghiệp vụ riêng của dự án
 │       ├── api-integration.md   # Tích hợp API riêng của dự án
-│       └── us/                  # TẦNG 3 — File Markdown theo từng Task Jira
+│       ├── us/                  # TẦNG 3 — File Markdown theo từng Task Jira
+│       └── bien-ban-hop/        # Biên bản họp của dự án: YYYY-MM/YYYY-MM-DD.md
 ├── 03-resources/                # Tài nguyên phục vụ BA đối chiếu: môi trường (chỉ URL/tài khoản/nơi lấy mật khẩu),
 │                                # danh mục thiết bị và đối tác liên quan nghiệp vụ
-└── 99-templates/                # Template dự án, template US, template Hiện trạng + Thay đổi, checklist review AI
+├── 04-bao-cao-ngay/             # Báo cáo hằng ngày của BA gửi cấp trên trước 16:00: YYYY-MM/YYYY-MM-DD.md
+└── 99-templates/                # Template dự án, template US, template Hiện trạng + Thay đổi,
+                                 # template biên bản họp, template báo cáo ngày, checklist review AI
 ```
 
 *Cấu trúc này được tối ưu riêng cho vai trò BA, có tham khảo cấu trúc kho tri thức của QC. Bảng đối chiếu chi tiết điểm giống/khác với bản QC nằm tại `phong-van/doi-chieu-cau-truc-BA-vs-QC-tham-khao.md`.*
@@ -187,6 +191,16 @@ Mọi thay đổi đều sinh tag/snapshot mới — **không sửa đè** lên 
 | US do AI hỗ trợ soạn nhưng không được review | Kiểm soát bằng cổng ở Mục 7 (checklist, header bắt buộc, peer review với US rủi ro cao) |
 | Nghiệp vụ thay đổi nhưng team vẫn làm theo bản cũ | Thông báo 2 kênh bắt buộc ở Mục 10 (comment Jira + group chat) |
 | Sửa tính năng cũ gây regression do không rõ hiện trạng | Bắt buộc tài liệu "Hiện trạng đang chạy" ở Mục 9 |
+
+## 14. Chu trình công việc hằng ngày của BA
+
+Chu trình này vận hành song song với quy trình xử lý Task ở Mục 6:
+
+1. **Chốt nghiệp vụ với team → viết US lên Jira.** Nghiệp vụ sau khi chốt được BA viết thành US trên Jira (kèm file US ở Tầng 3) theo Mục 6–8. Thông tin chưa chốt vẫn nằm ở `00-inbox/` với trạng thái "Chờ lên Jira".
+2. **Họp team → biên bản họp theo dự án.** Mỗi cuộc họp có biên bản lưu trong `bien-ban-hop/` của dự án, đặt theo ngày và nhóm theo tháng (`YYYY-MM/YYYY-MM-DD.md`, dùng template biên bản họp trong `99-templates/`). Trong biên bản luôn có các **quyết định nghiệp vụ thuộc 3 loại: Bỏ / Thay đổi / Bổ sung**. Mỗi quyết định **bắt buộc gắn mã Task Jira xử lý và file nghiệp vụ cần cập nhật** — quyết định chỉ nằm trong biên bản mà không chảy vào Jira/kho thì không được coi là nghiệp vụ chuẩn.
+3. **Báo cáo cấp trên trước 16:00 hằng ngày.** BA tổng hợp báo cáo ngày (theo template báo cáo ngày) từ 3 nguồn: `00-inbox/` trong ngày, các US đã xử lý, và quyết định trong các biên bản họp — lưu tại `04-bao-cao-ngay/YYYY-MM/YYYY-MM-DD.md` và gửi cấp trên **trước 16:00** mỗi ngày làm việc.
+
+**Về file Core (Tầng 1):** file `01-core-wiki/00-nghiep-vu-core-citybus.md` là file nghiệp vụ chung duy nhất viết dạng tự chứa, để **bất kỳ QC/DEV nào cũng nạp được làm ngữ cảnh cho AI** khi làm việc với bất kỳ dự án Citybus nào. Vì vậy file Core phải ổn định, không chứa nghiệp vụ riêng của dự án, và chỉ thay đổi khi BA chốt.
 
 ---
 
