@@ -37,8 +37,10 @@ Thiếu Nguồn đối chiếu / Người review / Ngày review ở phần đầ
 
 ## 6. Business Rules
 
-- **BR-01:**
-- **BR-02:**
+_(Mã BR/CM theo quy chuẩn đặt tên & mã truy vết — xem `JIRA-Workflows/01-quy-chuan-dat-ten-ma-truy-vet.md`. BR là rule riêng của US này; CM là rule dùng chung — khi tham chiếu CM phải dán kèm tóm tắt 1–2 dòng nội dung CM.)_
+
+- **<Mã dự án>-BR-<FR>.<US>-<NHÓM>-<số>:** _(vd FTT-BR-001.01-VAL-01)_
+- **Tham chiếu <Mã dự án>-CM-<NHÓM>-<số>:** _(vd FTT-CM-VAL-002)_ — Tóm tắt CM: _<1–2 dòng nội dung của CM>_
 
 ## 7. Acceptance Criteria
 

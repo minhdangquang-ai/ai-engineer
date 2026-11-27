@@ -19,5 +19,6 @@
 - [ ] Phần đầu file đã điền đủ: **Nguồn đối chiếu / Người review / Ngày review**
 - [ ] Mục không áp dụng đã ghi "Không áp dụng" thay vì xóa
 - [ ] (Nếu sửa tính năng cũ) Đã có đủ 2 phần **Hiện trạng đang chạy** + **Thay đổi yêu cầu**
+- [ ] **Mã BR/CM đúng quy chuẩn** đặt tên & mã truy vết (`JIRA-Workflows/01-quy-chuan-dat-ten-ma-truy-vet.md`); mọi CM được tham chiếu đều có **dán tóm tắt 1–2 dòng** ngay trong US (Self-Contained Story); AC giữ dạng `AC-01`
 
 > Thiếu Nguồn đối chiếu / Người review / Ngày review: **QC/DEV có quyền trả Task về**.
