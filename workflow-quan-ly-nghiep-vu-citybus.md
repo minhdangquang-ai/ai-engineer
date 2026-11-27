@@ -3,7 +3,7 @@
 
 | | |
 |---|---|
-| **Phiên bản** | 1.1 — ngày 27/11/2026 (v1.0 cùng ngày; v1.1 bổ sung: file Core dùng nạp ngữ cảnh AI, biên bản họp theo dự án, báo cáo ngày trước 16:00 — xem Mục 14) |
+| **Phiên bản** | 1.2 — ngày 27/11/2026 (v1.0, v1.1 cùng ngày; v1.1 bổ sung: file Core dùng nạp ngữ cảnh AI, biên bản họp theo dự án, báo cáo ngày trước 16:00 — xem Mục 14; v1.2 bổ sung: cấu trúc thư mục bên trong hồ sơ dự án theo logic của dự án App điều hành tài xế trên Tablet — `nghiep-vu-chung-du-an/` + `nghiep-vu-theo-us/` gồm `backlog/` và `sprint-<n>/`, quy tắc file thay đổi nghiệp vụ riêng có tiền tố ngày `yyyy-mm-dd` — xem Mục 4) |
 | **Trạng thái** | Bản chốt để trình team/Quản lý và áp dụng thử (pilot) |
 | **Người chịu trách nhiệm** | BA (Business Analyst) — chủ trì nghiệp vụ |
 | **Phạm vi áp dụng** | Các dự án thuộc hệ thống Citybus (FUTA) |
@@ -55,9 +55,13 @@ futa-citybus/
 ├── 02-projects/                 # TẦNG 2 + TẦNG 3 — Hồ sơ từng dự án
 │   └── 2026-q4-<ten-du-an>/     # Tên thư mục: <YYYY>-q<quý>-<tên ngắn, kebab-case, không dấu>
 │       ├── README.md            # Mục lục của dự án
-│       ├── <nghiep-vu-du-an>.md # Nghiệp vụ riêng của dự án
+│       ├── nghiep-vu-chung-du-an/  # TẦNG 2 — Nghiệp vụ chung của dự án
+│       │   ├── nghiep-vu-chung-du-an.md  # File nghiệp vụ gốc, tên cố định, không tiền tố ngày
+│       │   └── yyyy-mm-dd-thay-doi-*.md  # Mỗi thay đổi nghiệp vụ = 1 file riêng, chỉ rõ phần đã thay đổi
 │       ├── api-integration.md   # Tích hợp API riêng của dự án
-│       ├── us/                  # TẦNG 3 — File Markdown theo từng Task Jira
+│       ├── nghiep-vu-theo-us/   # TẦNG 3 — File Markdown theo từng Task Jira
+│       │   ├── backlog/         # US chưa được xếp vào sprint nào
+│       │   └── sprint-1/        # US thuộc Sprint 1 (giai đoạn hiện tại); sprint sau thêm sprint-2/, ...
 │       └── bien-ban-hop/        # Biên bản họp của dự án: YYYY-MM/YYYY-MM-DD.md
 ├── 03-resources/                # Tài nguyên phục vụ BA đối chiếu: môi trường (chỉ URL/tài khoản/nơi lấy mật khẩu),
 │                                # danh mục thiết bị và đối tác liên quan nghiệp vụ
@@ -122,7 +126,7 @@ Nội dung checklist review (file riêng trong `99-templates/`): đối chiếu 
 
 ## 8. Template file US (Tầng 3)
 
-Mỗi file US trong thư mục `us/` của dự án gồm:
+Mỗi file US trong thư mục `nghiep-vu-theo-us/` của dự án (nằm ở `backlog/` khi chưa vào sprint, hoặc `sprint-<n>/` khi đã xếp sprint) gồm:
 
 - **Phần đầu:** mã Task, dự án, link tới tài liệu Tầng 1/Tầng 2 liên quan, Nguồn đối chiếu, Người review, Ngày review, trạng thái (Draft/Đã chốt), tag.
 - **Phần thân:** Mục tiêu · Phạm vi (làm / không làm) · Actor · Luồng chính · Luồng ngoại lệ · Business Rules (đánh số `BR-...`) · Acceptance Criteria dạng Given/When/Then (đánh số `AC-...`) · Dữ liệu/API liên quan · Câu hỏi còn mở.
