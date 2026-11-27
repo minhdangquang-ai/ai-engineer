@@ -4,6 +4,7 @@ Từ điển nghiệp vụ chuẩn dùng chung cho **toàn bộ hệ thống Cit
 
 | File | Nội dung |
 |---|---|
+| **`00-nghiep-vu-core-citybus.md`** | **File Core chính thức** — nghiệp vụ chung toàn Citybus trong 1 file tự chứa, dùng để nạp ngữ cảnh cho AI và làm căn cứ chung cho mọi dự án |
 | `01-web-admin.md` | Web Admin & Website Citybus (Smartbus Admin: tuyến, nhân sự, giờ tài, eLVC, báo cáo...) |
 | `02-onbus-hardware.md` | Thiết bị trên xe: POS T10, NFC/QR, cơ chế offline |
 | `03-mobile-app-driver.md` | App tài xế/tiếp viên & điều hành trực tuyến |

@@ -10,8 +10,10 @@ Ví dụ: `2026-q4-smartbus-vs-gops/`, `2026-q4-app-dieu-hanh-tai-xe/`.
 ├── README.md              # Mục lục của dự án (tạo từ 99-templates/template-du-an.md)
 ├── nghiep-vu-du-an.md     # Tầng 2 — Nghiệp vụ riêng của dự án
 ├── api-integration.md     # Tích hợp API riêng của dự án
-└── us/                    # Tầng 3 — File US theo Task Jira
-    └── <Mã task>-<tên ngắn>.md
+├── us/                    # Tầng 3 — File US theo Task Jira
+│   └── <Mã task>-<tên ngắn>.md
+└── bien-ban-hop/          # Biên bản họp của dự án, nhóm theo tháng
+    └── YYYY-MM/YYYY-MM-DD.md
 ```
 
 ## Quy định theo loại dự án

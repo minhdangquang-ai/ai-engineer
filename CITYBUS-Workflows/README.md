@@ -7,10 +7,11 @@
 | Thư mục | Nội dung |
 |---|---|
 | `00-inbox/` | Sổ tiếp nhận thông tin thô của BA theo ngày — trạng thái "Chờ lên Jira" / "Đã lên Jira [link]" |
-| `01-core-wiki/` | **Tầng 1** — Nghiệp vụ chung Citybus, chia theo miền |
-| `02-projects/` | **Tầng 2 + Tầng 3** — Hồ sơ từng dự án (`<YYYY>-q<quý>-<tên dự án>/`), bên trong có thư mục `us/` chứa file theo Task Jira |
+| `01-core-wiki/` | **Tầng 1** — Nghiệp vụ chung Citybus. File chính: `00-nghiep-vu-core-citybus.md` — **file Core duy nhất, dùng để nạp ngữ cảnh cho AI**; các file còn lại chia theo miền |
+| `02-projects/` | **Tầng 2 + Tầng 3** — Hồ sơ từng dự án (`<YYYY>-q<quý>-<tên dự án>/`), bên trong có `us/` (file theo Task Jira) và `bien-ban-hop/` (biên bản họp theo ngày, nhóm theo tháng) |
 | `03-resources/` | Tài nguyên phục vụ BA đối chiếu (môi trường, thiết bị, đối tác) |
-| `99-templates/` | Template dự án, template US, template Hiện trạng + Thay đổi, checklist review AI |
+| `04-bao-cao-ngay/` | Báo cáo hằng ngày của BA gửi cấp trên **trước 16:00**, nhóm theo tháng |
+| `99-templates/` | Template dự án, template US, template Hiện trạng + Thay đổi, template biên bản họp, template báo cáo ngày, checklist review AI |
 
 ## Quy tắc bắt buộc
 
